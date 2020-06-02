@@ -79,10 +79,10 @@ public class PlayerMove : MonoBehaviour
         //3. 메인카메라의 뷰포트를 가져와서 처리한다.
         //스크린좌표 : 왼쪽하단0,0  우측상담 maxX,maxY
         //뷰포트좌표 : 왼쪽하단 0,0 우측상단 1.0f,1.0f
-        Vector3 position = Camera.main.WorldToViewportPoint(transform.position);
-        position.x = Mathf.Clamp(position.x,0.0f+margin.x,1.0f-margin.x);
-        position.y = Mathf.Clamp(position.y,0.0f+margin.y,1.0f-margin.y);
-        transform.position = Camera.main.WorldToScreenPoint(transform.position);
+        //Vector3 position = Camera.main.WorldToViewportPoint(transform.position);
+        //position.x = Mathf.Clamp(position.x,0.0f+margin.x,1.0f-margin.x);
+        //position.y = Mathf.Clamp(position.y,0.0f+margin.y,1.0f-margin.y);
+        //transform.position = Camera.main.WorldToScreenPoint(transform.position);
 
     }
 }

@@ -16,11 +16,14 @@ public class Enemy : MonoBehaviour
         transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 
+   
     private void OnCollisionEnter(Collision collision)
     {
+        //ScoreMan.score += 1;
         //자기자신도 없애고
         //충돌된 오브젝트도 없앤다.
         Destroy(gameObject);
         Destroy(collision.gameObject);
+        ScoreMan.Instance.AddScore();
     }
 }
